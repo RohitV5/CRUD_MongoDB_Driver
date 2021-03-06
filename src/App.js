@@ -7,26 +7,16 @@ class App extends Component {
       super();
 
       this.state = {
-        monsters:[{
-          name: ' Frankenstein',
-          id: 'asc1'
-        },
-        {
-          name: ' Dracula',
-          id:'asc2'
-        },
-        {
-          name: ' Zombie',
-          id:'asc3'
-        }
-
-        ]
+        monsters:[]
       }
     }
     
-    changeStuff(){
-      this.setState({string: this.state.string + " world !",text: "Welcome to React World !!"})
-    }
+    componentDidMount(){
+      // fetch is javascript native method.
+      fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response=>response.json())
+      .then(users => this.setState({monsters:users}))
+    } 
 
       render () {
         return (
