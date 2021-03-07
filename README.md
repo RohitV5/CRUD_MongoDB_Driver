@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+By Default react gives function which return htmls but we can write classes which returns html by using same function from react and extending that using class.
+
+Reason we do this is because classes gives us a lot more fucntionality than a function and react allows this.
+
+The render method returns HTML.
+
+Every component has its state which is an object and VirtualDOM recognizes when it changes.
